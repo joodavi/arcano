@@ -1,0 +1,84 @@
+/* Estilizando o cabeçalho das tabs */
+.flexlayout__tab_button {
+    background-color: inherit;
+    color: #000000;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.flexlayout__tabset {
+  border-radius: 10px;
+}
+
+
+/* Espaços entre os painéis */
+.flexlayout__splitter {
+	background-color: #F0EEE7;
+	border-radius: 10px;
+}
+
+.flexlayout__splitter:hover {
+	background-color: #F0EEE7;
+	border-radius: 10px;
+}
+
+.flexlayout__splitter_drag {
+  background-color: #F0EEE7 !important;
+  border-radius: 10px;
+}
+
+/* Área principal */
+.flexlayout__layout {
+  background-color: #F0EEE7; /* Cinza claro */
+}
+
+/* Borders */
+.flexlayout__border_tab_contents {
+  border-radius: 10px;
+}
+
+.flexlayout__border {
+  border-radius: 10px;
+  padding: 0px;
+  background-color: inherit;
+}
+
+.flexlayout__border_button {
+  background-color: #dbd9d2;
+  color: #CA662C;
+  padding: 2px 8px;
+  font-weight: 400;
+}
+
+.flexlayout__border_button:hover {
+  background-color: #dbd9d2;
+  color: #CA662C;
+  opacity: 0.9;
+}
+
+.flexlayout__border_button--selected {
+  background-color: #CA662C;
+  color: white;
+  padding: 2px 8px;
+  font-weight: 400;
+}
+
+.flexlayout__border_button--selected:hover {
+  background-color: #CA662C;
+  color: white;
+  opacity: 0.9;
+}
+
+.flexlayout__tab_button--selected {
+  background-color: #CA662C;
+  color: white;
+  padding: 2px 8px;
+  font-weight: 400;
+}
+
+.flexlayout__tab_button--selected:hover {
+  background-color: #CA662C;
+  color: white;
+  opacity: 0.9;
+}
