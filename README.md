@@ -1,14 +1,25 @@
-# Vism: Visualization System 
+# Arcano
 
-## Extensões recomendadas para usar no VSCode:
-- [Biome for VSCode](https://biomejs.dev/reference/vscode/)
+Arcano is a React application built with Vite. To get started, follow these steps:
 
-## Bibliotecas importantes:
+1. Clone the repo
+`git clone https://github.com/joodavi/arcano.git`
+
+2. Install dependencies
+`npm install`
+
+3. Start the development server
+`npm run dev`
+
+## Core Dependencies
 - [Vite](https://vite.dev/guide/)
 - [React Query](https://tanstack.com/query/latest/docs/framework/react/overview)
 - [Vega-Embed](https://vega.github.io/vega-lite/usage/embed.html)
 - [Biome](https://biomejs.dev/guides/getting-started/)
 - [Ant Design - Theme Edotpr](https://ant.design/theme-editor)
+
+## Recommended VS Code Extensions
+- [Biome for VSCode](https://biomejs.dev/reference/vscode/)
 
 # Vite README instructions:
 
