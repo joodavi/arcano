@@ -45,3 +45,65 @@ O React oferece uma abordagem declarativa para construir interfaces, com compone
 
 #### 3.1.3.3 Gramática de visualização
 Arcano foi arquitetado para ser modular e flexível: toda a camada de geração de gráficos é isolada por meio de abstrações que podem ser estendidas a outras gramáticas de visualização. Hoje utilizamos Vega-Lite, mas a estrutura está preparada para incorporar alternativas como D3, Chart.js ou qualquer outra biblioteca, sem grandes retrabalhos. Essa modularização garante que o código permaneça limpo, escalável e pronto para crescimentos e integrações futuras.
+
+## 4 Manual de Utilização
+### 4.1 Inserir de Dataset
+Passo 1: Na tela principal do Arcano, clique em “New dataset”. No modal, clique em "Load a CSV file". Selecione o arquivo no seu computador;
+
+Passo 2: Aguarde o sistema exibir a pré-visualização dos dados.
+
+Passo 3: Verifique se todas as colunas foram detectadas corretamente no preview, clique em "Save this dataset".
+
+--- 
+Exceções:
+
+EXC1: um arquivo com outro formato for inserido
+
+Então faça:
+1. Observe que, embora o upload seja aceito, a visualização não faz sentido (colunas faltando ou valores inválidos).
+2. Confira a extensão do arquivo no preview e a mensagem de alerta do sistema.
+3. Converta/exporte seu dado para o formato CSV e tente novamente.
+
+EXC2: um dataset muito grande for inserido
+
+Então faça:
+1. Note que o upload demora e a renderização do gráfico fica lenta ou travando.
+2. Consulte a notificação de performance (se exibida) ou teste ações de zoom/pan para verificar a lentidão.
+3. Divida o dataset em partes menores ou crie uma amostra representativa e importe esse subconjunto.
+
+### 4.2 Ajustar tipos de dados
+
+Passo 1: Após o upload do CSV, acesse na página inicial, através do botão de editar - presente em cada card de dataset - para ter acesso a edição dos tipos de coluna.
+
+Passo 2: Identifique colunas cujo tipo detectado não condiz com os valores.
+
+Passo 3: Selecione o tipo correto na lista em cada coluna, note que é permitida a seleção de qualquer outro tipo de dado, mas nem todos serãoa ceitos pelo sistema e não sofrerão mudança.
+
+Passo 4: Quando todos os tipos estiverem corretos, volte a página inicial e terá salvo os tipos de dados novo.
+
+### 4.3 Mapear variáveis aos canais visuais
+
+Passo 1: Abra o painel de criação de visuzliações, onde estão listados Eixo X, Eixo Y, Cor e Tamanho.
+
+Passo 2: Selecione a variável desejada usando os botões "Add" em cada canal.
+
+Passo 3: Repita o processo para cada canal até compor a visualização desejada.
+
+Passo 4: Use o botão de interatividade, ao lado da visualização, para ativar interações. 
+
+### 4.4 Deletar dataset
+
+Passo 1: Acesse a página inicial.
+
+Passo 2: Localize o dataset que você deseja remover na lista.
+
+Passo 3: Clique no ícone de lixeira dentro do card.
+
+Passo 4: Confirme a ação na janela modal de confirmação.
+
+---
+Exceções
+
+EXC1: ao apagar um dataset, o modal de deleção continua aparecendo para os dataset subsequentes
+
+Passo 1: Use o botão de fechar o modal, para não visualizar mais o modal de deleção.
