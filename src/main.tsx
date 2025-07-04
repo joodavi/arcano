@@ -11,6 +11,8 @@ import { VisualizationBuilder } from './pages/VisualizationBuilder.tsx';
 import VisualizationManager from './pages/VisualizationManager.tsx';
 import config from './types/Theme.ts';
 
+// This file manage the system routes.
+
 const router = createBrowserRouter([
 	{
 		path: '/',

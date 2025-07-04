@@ -13,7 +13,6 @@ import useDatasets from "../stores/dataset";
 import useVisualizations from "../stores/visualizations";
 import { CountOfRecordsColumn, type VisMapping } from "../types/Visualization";
 
-
 export function VisualizationBuilderDnD() {
     const { getDatasetById } = useDatasets();
     const { visualizations } = useVisualizations();

@@ -1,4 +1,4 @@
-
+// This file maps the X and Y channels to the Vega-Lite spec and adds specific interactivity properties.
 export const VegaLiteInteractiveDataTypesToMark: Record<
 	string,
 	Array<{ mark: unknown, encoding?: Record<string, unknown>, params?: Array<unknown> }>

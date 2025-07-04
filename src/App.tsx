@@ -6,6 +6,8 @@ import { ROUTES } from "./consts/routes";
 
 const { useToken } = theme;
 
+// This file renders the first page, where you can view loaded datasets, edit or delete them, and access other saved visualizations.
+
 function App() {
 	const { token } = useToken();
 	const navigate = useNavigate();

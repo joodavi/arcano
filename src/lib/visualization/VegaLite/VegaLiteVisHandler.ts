@@ -1,4 +1,4 @@
-import type { ReactNode, RefObject } from "react";
+import type { RefObject } from "react";
 import type { Renderers } from "vega";
 import embed, { type EmbedOptions } from "vega-embed";
 import type { TopLevelSpec } from "vega-lite";
@@ -6,6 +6,8 @@ import type { Column, Dataset } from "../../../types/Dataset";
 import type { VisMapping } from "../../../types/Visualization";
 import VisHandler from "../VisualizationHandler";
 import { VegaLiteEmptyVis } from "./VegaLiteConsts";
+
+// This file creates visualizations without interactivity; unlike the interactive version, it doesn’t include the Vega-Lite props used for interactivity.
 
 const conlumnTypeToVegaType: Record<Column["type"], string> = {
 	categorical: "nominal",

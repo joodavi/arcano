@@ -21,8 +21,6 @@ import useVisualizations from "../stores/visualizations";
 import { CountOfRecordsColumn, type VisMapping } from "../types/Visualization";
 import './VisualizationBuilder.css';
 
-
-
 export function VisualizationBuilder() {
     const { getDatasetById } = useDatasets();
     const { visualizations } = useVisualizations();

@@ -1,9 +1,7 @@
 # Arcano
 
 ## 1. Descrição
-Arcano é uma ferramenta React, criada para simplificar a exploração de dados por meio da geração de visualizações.
-
-O processo de criação começa ao importar um dataset, você tem à disposição canais visuais como eixos X e Y, cores e tamanhos. As variáveis podem ter seus tipos alterados e adicionadas aos canais para montar a visualização. É possível salvar cada gráfico dentro do sistema, garantindo que você possa revisitar e refinar seu trabalho sempre que quiser.
+Arcano é uma ferramenta React, criada para simplificar a exploração de dados por meio da geração de visualizações. O processo de criação começa ao importar um dataset, você tem à disposição canais visuais como eixos X e Y, cores e tamanhos. As variáveis podem ter seus tipos alterados e adicionadas aos canais para montar a visualização. É possível salvar cada gráfico dentro do sistema, garantindo que você possa revisitar e refinar seu trabalho sempre que quiser.
 
 Pensado tanto para especialistas quanto para não especialistas, o Arcano atende professores, alunos ou qualquer pessoa interessada em transformar dados em insights. Não é preciso ter experiência prévia com programação ou design de gráficos.
 
@@ -64,12 +62,16 @@ Então faça:
 2. Confira a extensão do arquivo no preview e a mensagem de alerta do sistema.
 3. Converta/exporte seu dado para o formato CSV e tente novamente.
 
+Arcano ainda não filtra os tipos arquivos inserido.
+
 EXC2: um dataset muito grande for inserido
 
 Então faça:
 1. Note que o upload demora e a renderização do gráfico fica lenta ou travando.
 2. Consulte a notificação de performance (se exibida) ou teste ações de zoom/pan para verificar a lentidão.
 3. Divida o dataset em partes menores ou crie uma amostra representativa e importe esse subconjunto.
+
+Arcano faz processamento no front-end e tem dificuldades com arquivos grandes.
 
 ### 4.2 Ajustar tipos de dados
 
@@ -107,3 +109,5 @@ Exceções
 EXC1: ao apagar um dataset, o modal de deleção continua aparecendo para os dataset subsequentes
 
 Passo 1: Use o botão de fechar o modal, para não visualizar mais o modal de deleção.
+
+Isso acontece pois a ação de deleção está diretamente envolvido com a posição do dataset em um array. Então quando um array ocupa sua posição, ele continua sugerindo a opção de deletar o dataset.

@@ -6,6 +6,8 @@ import ShowEditField from "../components/ui/molecules/ShowEditField/ShowEditFiel
 import { ROUTES } from "../consts/routes";
 import useDatasets from "../stores/dataset";
 
+// This page renders the dataset manager, where you can edit the dataset type and other dataset properties, such as the description.
+
 export default function DatasetManager() {
     const { updateDataset, getDatasetById } = useDatasets();
     const { datasetId } = useParams();
@@ -17,7 +19,6 @@ export default function DatasetManager() {
     if(!selectedDataset) {
         return <Navigate to={ROUTES.HOME} />;
     }
-
 
     const handleEditDatasetName = (newName: string) => {
         selectedDataset.setName(newName);

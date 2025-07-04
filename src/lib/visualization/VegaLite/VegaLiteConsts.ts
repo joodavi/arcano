@@ -1,6 +1,9 @@
 import type { Renderers } from "vega";
 import type { EmbedOptions } from "vega-embed";
-import type { TopLevelSpec } from "vega-lite";
+import type { TopLevelSpec } from "vega-lite"
+
+// This file initializes the visualization with initial Vega-Lite properties.
+
 
 export const VegaLiteEmptyVis: TopLevelSpec = {
 	width: "container",

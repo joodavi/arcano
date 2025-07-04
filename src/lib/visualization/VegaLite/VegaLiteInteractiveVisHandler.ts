@@ -7,6 +7,8 @@ import type { VisMapping } from "../../../types/Visualization";
 import VisHandler from "../VisualizationHandler";
 import { VegaLiteEmptyVis } from "./VegaLiteConsts";
 
+// This file creates interactive visualizations; unlike VegaLiteVisHandler, it uses additional Vega-Lite spec properties to enable chart interactivity.
+
 const conlumnTypeToVegaType: Record<Column["type"], string> = {
     categorical: "nominal",
     ordinal: "ordinal",
@@ -84,14 +86,6 @@ export class VegaLiteInteractiveVisHandler extends VisHandler {
                     type: conlumnTypeToVegaType[visMapping.xAxis[0].type],
                     aggregate: visMapping.xAxis[0].options?.aggregationFunction?.name,
                 };
-                // to-do: estudar Vega-lite x2
-                // if (visMapping.xAxis.length > 1) {
-                // 	encoding.x2 = {
-                // 		field: visMapping.xAxis[1].id,
-                // 		type: conlumnTypeToVegaType[visMapping.xAxis[1].type],
-                // 		aggregate: visMapping.xAxis[0].options?.aggregationFunction?.name,
-                // 	};
-                // }
             }
             if (visMapping.yAxis.length > 0) {
                 encoding.y = {
@@ -99,14 +93,6 @@ export class VegaLiteInteractiveVisHandler extends VisHandler {
                     type: conlumnTypeToVegaType[visMapping.yAxis[0].type],
                     aggregate: visMapping.yAxis[0].options?.aggregationFunction?.name,
                 };
-                // to-do: estudar Vega-lite y2
-                // if (visMapping.yAxis.length > 1) {
-                // 	encoding.y2 = {
-                // 		field: visMapping.yAxis[1].id,
-                // 		type: conlumnTypeToVegaType[visMapping.yAxis[1].type],
-                // 		aggregate: visMapping.yAxis[0].options?.aggregationFunction?.name,
-                // 	};
-                // }
             }
             if (visMapping.color.length > 0) {
                 encoding.color = {
@@ -128,7 +114,6 @@ export class VegaLiteInteractiveVisHandler extends VisHandler {
                     values: dataset.getRows(),
                 },
                 background: "inherit",
-                // view: { fill: "inherit" }, //retirado para funcionar zoom/moving
                 width: "container",
                 height: "container",
                 params: visSpec?.[0]?.params,

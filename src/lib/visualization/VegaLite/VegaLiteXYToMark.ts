@@ -1,4 +1,4 @@
-
+// This file maps X and Y channels and generates charts for different column types.
 export const VegaLiteDataTypesToMark: Record<
 	string,
 	Array<{mark: string, encoding?: Record<string, unknown>}>
